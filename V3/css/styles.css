@@ -1,0 +1,65 @@
+#wrapper {
+    margin:auto;
+    width:1300px;
+  }
+  input {
+    width:50px;
+  }
+  svg {
+    border:1px solid gray;
+    border-radius:10px;
+    height:550px;
+    width:550px;
+    margin:5px;
+  }
+  #linechart {
+    width:700px;
+    height:400px;
+  }
+  #legend {
+    height:250px;
+    width:550px;
+  }
+
+  #stack {
+    width:700px;
+    height:400px;
+
+  }
+  
+  html {
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+  
+  
+  h2, h3 {
+    text-align:center;
+  }
+  .x_axis line, .x_axis .domain {
+    stroke:gray;
+  }
+  .axisLabel, .legendLabel {
+    font-size:20px;
+    fill:gray;
+  }
+  
+  .y_axis line {
+    stroke:gray;
+    stroke-opacity: 0.5;
+    stroke-dasharray: 5,10;
+  }
+  .y_axis text, .x_axis text {
+    fill:gray;
+    font-size:1.5em;
+  }
+  
+  #tooltip {
+    border:1px solid gray;
+    border-radius:5px;
+    background-color: white;
+    position:absolute;
+    padding:10px;
+  }
+
+  
+  
