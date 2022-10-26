@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Data Visualization of cholera epidemic in London in 1854</h1>
+    <h4 style="font-style: italic">
+      Click here to go back to visualization:
+      <a href="index.html">Visualization</a>
+    </h4>
+    <h2>Introduction</h2>
+    <p>
+      Since the introduction of data visualization, Dr. John Snow's use of data
+      visualization to find relation between the contaminated water and cholera
+      disease is a revolution. Data Visualization of cholera epidemic in London
+      in 1854 is recreation of Dr. John Snow's map of London's 1854 cholera
+      epidemic done by Arunodhaya Reddy Chityala for the course work of
+      Visualization Design, Analysis, & Evaluation course project(H517.)
+    </p>
+    <h2>Data</h2>
+    <ul style="list-style-type: square">
+      <li>
+        'streets.json' is the json file which stores the data of coordinates
+        ofthe streets as the series of line segments.
+      </li>
+      <li>'pumps.csv' stores the coordinates of all 13 pump locations</li>
+      <li>
+        'deathdays.csv' stores the data of all the number od deaths for each day
+        of the outbreak
+      </li>
+      <li>
+        'deaths_age_sex.csv' stores the data of age and sex of dead victims
+        along with location of the victim.
+      </li>
+    </ul>
+    <h2>Initial Design Idea</h2>
+    <p>
+      Initial design is as given below and I thought of showing number of deaths
+      in each day to be represented in graphical representations and later
+      changed to cumulative number of deaths per each day. Layout is also
+      changed from initial idea for better visuals.
+    </p>
+    <img
+      src="images/1.jpeg"
+      style="height: 500px; width: 500px"
+      alt="25"
+      title="Initial Design Layout"
+    />
+    <br />
+    <h2>Design Layout</h2>
+    <img
+      src="images/2.jpeg"
+      alt="25"
+      style="height: 500px; width: 800px"
+      title="Actual Design Layout"
+    />
+    <br />
+    <p>
+      Layout has been changed from initial design by having the time series line
+      chart beside the map and start date and end date is kept at top. As it
+      will be easy and better visualize the changes in map as we hover over the
+      data in the time series chart.
+    </p>
+    <img
+      src="images/3.jpeg"
+      alt="25"
+      style="height: 360px; width: 800px"
+      title="date, show on map, cumulative deaths"
+    />
+    <br />
+    <p>
+      As mentioned in the initial design idea, visualizations are changed from
+      displaying number of deaths on each day to the cumulative number of deaths
+      till that date. To have better understanding in the pattern of deaths for
+      the user I have added an option for user input which has starting date and
+      ending date. If user wants to get data of deaths of nth day user has to
+      mention n-1 day in starting date and n in the ending date.
+    </p>
+    <img
+      src="images/4.jpeg"
+      alt="25"
+      style="height: 300px; width: 500px"
+      title="Time series Line Chart showing cumulative deaths"
+    />
+    <br />
+    <p>
+      Map will display the details of pumps, warehouse, brewery and deaths with
+      locations. Time series chart is created for cumulative number of deaths
+      for each day from 19 Aug to 29 Sept. Stacked bar graph will represent the
+      gender of the victims and x-axis shows the age of victims. An information
+      block will show which shape and colour represents which item in the map.
+    </p>
+    <img
+      src="images/5.jpeg"
+      alt="25"
+      style="height: 600px; width: 400px"
+      title="Map showing details of pumps, brewery, work house and deaths."
+    />
+    <br />
+    <p>
+      Deaths in map and bar graph changes as we hover over the time series chart
+      as a part of interactive visualizations. When we hover on the deaths on
+      Map it will give details of gender and age of that particular victim. We
+      can also zoom in/out and pan in the map.
+    </p>
+    <h2>Design Choices</h2>
+    <p>
+      In Map, I have used Red, Green and Yellow colours for pump, brewery and
+      work house respectively. To help them differentiate the red and Green
+      colour for color blindness I have used different shapes for them.
+    </p>
+    <p>
+      For time series data I have used the line chart as it is simplest and
+      better for understanding. For gender and age I have used stacked bar graph
+      where gender will be shown in different colour in each bar and different
+      bars for different age groups.
+    </p>
+    <img
+      src="images/6.jpeg"
+      alt="25"
+      style="height: 300px; width: 450px"
+      title="Bar chart showing gender and age data."
+    />
+    <p>
+      I have used d3.schemecategory10 for colours of ages. Then I have checked
+      for colour blindness by colour oracle.
+    </p>
+    <h2>Research Questions</h2>
+    <p>
+      1. Is there any difference in immunity for cholera between children,
+      adults and old age people?
+    </p>
+    <p>2. Are Men More prone to cholera than Women?</p>
+    <p>
+      Both the research questions can be answered from bar chart for entire
+      days.
+    </p>
+    <img
+      src="images/7.jpeg"
+      alt="25"
+      style="height: 300px; width: 450px"
+      title="Research Question 1."
+    />
+    <p>
+      Here we can see number of deaths of children and old age people is high
+      which answers the first research question that children and old people
+      have less immunity for cholera. There is no significant difference between
+      deaths of men and women which says that men are not more prone to cholera
+      than men.
+    </p>
+    <h4>Other Insights That Can be Uncovered</h4>
+    <p>
+      I wonder if there are any other factors that effect the deaths by cholera
+      like:
+    </p>
+    <ul style="list-style-type: square">
+      <li>
+        Is cholera virus ppm in water reduces as the distance from source of
+        water increases?
+      </li>
+      <li>
+        Why is there sudden rise of deaths from 30 Aug to 2nd Sept and decline
+        from there?
+      </li>
+    </ul>
+    <h2>
+      Video explaining Data Visualization of cholera epidemic in London in 1854
+    </h2>
+    <iframe
+      width="560"
+      height="315"
+      src="https://youtube.com/embed/ypw-pM8QcEE?"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <hr />
+    <h2>References</h2>
+    <a
+      href="https://towardsdatascience.com/data-visualization-with-d3-js-for-beginners-b62921e03b49"
+      >D3 for Data Visualization</a
+    >
+    <br />
+    <a
+      href="https://techblog.assignar.com/how-to-create-map-visualisation-using-d3js/"
+    >
+      D3 to create Map</a
+    >
+    <br />
+    <a href="http://colororacle.org/index.html">colour oracle</a>
+    <br />
+    <a href="https://www.geeksforgeeks.org/d3-js-schemecategory10-method/"
+      >d3.schemecategory10</a
+    >
+  </body>
+</html>
